@@ -80,7 +80,7 @@ exports.getAllChild = (req, res) => {
     if(type && type != '0')
         UserInfo.findAll({
             include: [
-                {model: User, where:{USER_PARENT:req.user.USER_ID, TYPE: type}, include: [{model: File, as:'cover', where:{REFERENCE:'user'}, required:false}] }
+                {model: User, where:{ USER_PARENT : req.user.USER_ID, TYPE: type}, include: [{model: File, as:'cover', where:{REFERENCE:'user'}, required:false}] }
             ],
         }).then(async function (result) {
             res.send({ message: 'get data sukses', data: result })
@@ -88,7 +88,7 @@ exports.getAllChild = (req, res) => {
     else
         UserInfo.findAll({
             include: [
-                {model: User, where:{USER_PARENT:req.user.USER_ID, TYPE: { [Op.not]: 'K'}}, include: [{model: File, as:'cover', where:{REFERENCE:'user'}, required:false}] }
+                {model: User, where:{ USER_PARENT : req.user.USER_ID, TYPE: { [Op.not]: 'K'}}, include: [{model: File, as:'cover', where:{REFERENCE:'user'}, required:false}] }
             ],
         }).then(async function (result) {
             res.send({ message: 'get data sukses', data: result })

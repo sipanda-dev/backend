@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
         },
         include: [
             { model: User, include: [UserInfo, {model: User, include: [UserInfo] }] },
-            {model:FollowUp, include: [{model: User, include: [UserInfo] }]},
+            { model: FollowUp, include: [{model: User, include: [UserInfo] }]},
             { model: File, where:{REFERENCE:'complaint'}, required:false}
         ],
     }).then(data => {

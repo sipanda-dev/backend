@@ -13,6 +13,7 @@ module.exports = (req, res, next) => {
                 {model: File, as:'cover', where:{REFERENCE:'user'}, required:false},
                 {model: File, as:'ktp', where:{REFERENCE:'ktp'}, required:false},
                 {model: File, as:'diri', where:{REFERENCE:'diri'}, required:false},
+                {model: User, include: [UserInfo]}
             ] }
         ],
     }).then(data => {
