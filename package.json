@@ -1,33 +1,26 @@
 {
-  "name": "backend",
+  "name": "Backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
-    "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "dotenv": "^10.0.0",
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.2",
     "mysql2": "^2.2.5",
     "mysql": "^2.18.1",
-    "sequelize": "^6.6.2",
-    "serve-index": "^1.9.1"
+    "serve-index": "^1.9.1",
+    "sequelize": "^6.6.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sipanda-dev/backend.git"
-  },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sipanda-dev/backend/issues"
-  },
-  "homepage": "https://github.com/sipanda-dev/backend#readme"
+  "license": "ISC"
 }
