@@ -13,7 +13,7 @@ const cleanObj = require('../helpers/cleanObj')
 exports.create = (req, res) => {
     const complaint = {
         USER_ID: req.user.USER_ID,
-        PARENT : req.body.parent,
+        CREATE_BY : req.body.parent,
         TITLE: req.body.title,
         CATEGORY: req.body.category,
         DETAIL : req.body.detail,
